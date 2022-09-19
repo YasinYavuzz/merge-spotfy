@@ -1,48 +1,17 @@
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class LibraryWidget extends StatefulWidget {
+  const LibraryWidget({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<LibraryWidget> createState() => _LibraryWidgetState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _LibraryWidgetState extends State<LibraryWidget> {
   List<String> _activitiesIcon = ["assets/likeIcon.png","assets/groupIcon.png","assets/podcastIcon.png"];
   List<String> _activitiesText = ["Liked Songs","Followed Artists","Followed Podcast"];
   List<String> _activitiesArrow = ["assets/arrowsIcon.png","assets/arrowsIcon.png","assets/arrowsIcon.png"];
-  
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

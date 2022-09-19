@@ -1,48 +1,20 @@
+
 import 'package:flutter/material.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
-  runApp(const MyApp());
-}
-
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class HomeWidget extends StatefulWidget {
+  const HomeWidget({super.key});
 
   @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
+  State<HomeWidget> createState() => _HomeWidgetState();
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _HomeWidgetState extends State<HomeWidget> {
   List<String> _songArtist = ["Juice Wrld, Drake, Kendrick","Joji, The KID LAROI","Lamar and more..."];
   List<String> _songType = ["Hip Hop Mix","Moody Mix","Moody Mix"]; 
   List<String> _albumPhoto = ["assets/song1.png","assets/song2.png","assets/song2.png"];
   List<String> _artists = ["assets/artist1.png","assets/artist.png","assets/artist.png"];
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

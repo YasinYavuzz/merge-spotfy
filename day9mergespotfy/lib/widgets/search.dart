@@ -1,45 +1,17 @@
+
+
 import 'package:flutter/material.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
-
-  final String title;
+class SearchWidget extends StatefulWidget {
+  const SearchWidget({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<SearchWidget> createState() => _SearchWidgetState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
+class _SearchWidgetState extends State<SearchWidget> {
   var _controller = TextEditingController();
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -580,28 +552,7 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
 
-      bottomNavigationBar: BottomNavigationBar(
-        backgroundColor: Colors.black,
-        items: <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/home.png'),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset(
-              'assets/search.png',
-              color: Colors.green,
-            ),
-            label: '',
-          ),
-          BottomNavigationBarItem(
-            icon: Image.asset('assets/book.png'),
-            label: '',
-          ),
-        ],
-
-        //selectedItemColor: Colors.amber[800],
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      
     );
   }
 }
